@@ -21,7 +21,7 @@ function funkar(position)
     const longitud = position.coords.longitude
     const accuracy = position.coords.accuracy
     statusText.innerHTML = latitud + " " + longitud +" " +accuracy + " Avstånd till Nyköping"
-    + getDistance(latitud, longitud, 59.370571, 16.513590, "k")
+    + getDistance(latitud, longitud, 59.396150, 16.532250, "k")
 
     openStreetMap(latitud, longitud)
 }
@@ -34,7 +34,7 @@ function openStreetMap(lat, long)
 {
     let latzoom = 0.01071819/2
     let longzoom = 0.020256042/2
-    let marker = lat + "2C" + long
+    let marker = lat + "%2C" + long
 
     let bbox = (long - longzoom) + "%2C" + (lat - latzoom) + "%2C" + (long + longzoom) + "%2C" + (lat + latzoom)
    
